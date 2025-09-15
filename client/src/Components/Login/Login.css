@@ -1,0 +1,291 @@
+/* Login.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.loginPage {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+  display: flex; /* Added to center the container */
+  align-items: center; /* Added to center the container */
+}
+
+.container {
+  width: 100%;
+  max-width: 1050px;
+  height: 650px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Centers the container */
+  display: flex; /* Added to make children side by side */
+}
+
+/* Left video section */
+.videoDiv {
+  position: relative;
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.videoDiv video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 80%;
+}
+
+.textDiv .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer under video */
+.footerDiv {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  gap: 0.8rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  display: flex; /* Added to ensure flex properties work */
+  align-items: center; /* Added to center items vertically */
+}
+
+.footerDiv .text {
+  font-size: 0.9rem;
+}
+
+.footerDiv .btn {
+  padding: 0.6rem 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4a6cf7;
+  transition: all 0.3s ease;
+}
+
+.footerDiv .btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Right form section */
+.formDiv {
+  width: 55%;
+  padding: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  display: flex; /* Added to ensure flex properties work */
+}
+
+.headerDiv {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.headerDiv img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.headerDiv h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Form inputs */
+.form {
+  width: 100%;
+}
+
+.loginStatus {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+  border-left: 4px solid #4a6cf7;
+}
+
+.inputDiv {
+  margin-bottom: 1.2rem;
+}
+
+.inputDiv label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.inputDiv .input {
+  padding: 0.8rem 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex; /* Added to ensure input and icon align properly */
+  align-items: center; /* Added to center items vertically */
+}
+
+.inputDiv .input:focus-within {
+  border-color: #4a6cf7;
+  box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+}
+
+.inputDiv input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 1rem;
+  padding: 0.2rem;
+  color: #333;
+}
+
+.inputDiv input::placeholder {
+  color: #a0aec0;
+}
+
+.icon {
+  color: #4a6cf7;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+
+/* Button */
+.btn {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4a6cf7 0%, #3b5bdb 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  display: flex; /* Added to ensure flex properties work */
+  align-items: center; /* Added to center items vertically */
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #3b5bdb 0%, #2f4fcc 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 108, 247, 0.4);
+}
+
+/* Forgot password */
+.forgotPassword {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 1rem;
+  display: block; /* Added to ensure it's visible */
+}
+
+.forgotPassword a {
+  color: #4a6cf7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.forgotPassword a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    max-width: 450px;
+  }
+  
+  .videoDiv, .formDiv {
+    width: 100%;
+  }
+  
+  .videoDiv {
+    height: 250px;
+  }
+  
+  .textDiv .title {
+    font-size: 1.8rem;
+  }
+  
+  .footerDiv {
+    position: relative;
+    bottom: auto;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginPage {
+    padding: 1rem;
+  }
+  
+  .formDiv {
+    padding: 1.5rem;
+  }
+  
+  .textDiv .title {
+    font-size: 1.5rem;
+  }
+}
